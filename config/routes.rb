@@ -13,7 +13,11 @@ get '/home', to: 'pages#home'
 #get 'recipes/:id', to: 'recipe#show'
 #delete 'recipes/:id', to: 'recipe#destroy'
 
-resources :recipes
+resources :recipes do
+	member do
+		post 'like'
+	end
+end
 
 
  
