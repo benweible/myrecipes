@@ -21,6 +21,10 @@ end
 
 resources :chefs, except: [:new]
 	get '/register', to: 'chefs#new'
+	
+resources :styles
+
+resources :ingredients
 
 get '/login', to: 'logins#new'
 post '/login', to: 'logins#create'
